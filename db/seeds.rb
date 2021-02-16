@@ -6,7 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+Article.
 
+puts 'creating articles...'
 10.times do
   new_article = Article.new(
     title: Faker::TvShows::DrWho.character,
@@ -14,3 +16,5 @@ require 'faker'
     )
   new_article.save
 end
+
+puts "#{Article.count} created!"
